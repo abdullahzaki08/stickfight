@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stickman Fight - 2 Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay">
+            <h1>Stickman Fight</h1>
+            <button id="start-btn">Start the Game</button>
+        </div>
+
+        <!-- UI Overlay -->
+        <div id="ui-overlay">
+            <div class="player-info p1">
+                <div class="health-bar-container">
+                    <div id="p1-health" class="health-bar"></div>
+                </div>
+                <span class="player-label">PLAYER 1 (RED)</span>
+            </div>
+            
+            <div id="timer">99</div>
+
+            <div class="player-info p2">
+                <div class="health-bar-container">
+                    <div id="p2-health" class="health-bar"></div>
+                </div>
+                <span class="player-label">PLAYER 2 (BLUE)</span>
+            </div>
+        </div>
+
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- Game Over Overlay (Hidden initially) -->
+        <div id="game-over-screen" class="overlay hidden">
+            <h1 id="winner-text">Player 1 Wins!</h1>
+            <button id="restart-btn">Restart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
